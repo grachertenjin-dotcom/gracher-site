@@ -82,16 +82,22 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 
 /* hero */
 .hero{padding-block:clamp(2rem,6vw,4rem) clamp(3rem,7vw,5rem);overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:clamp(2rem,4vw,3.2rem)}
+.hero-photo{order:-1}
+.hero-text{display:grid;grid-template-columns:1.1fr .9fr;column-gap:clamp(2rem,5vw,4.5rem);align-items:end}
+.hero-text .kicker{grid-column:1/-1}
+.hero-text h1{grid-column:1;grid-row:2/4;margin-bottom:0;align-self:end}
+.hero-text .sub{grid-column:2;grid-row:2;margin-bottom:1.6rem}
+.hero-text .cta{grid-column:2;grid-row:3}
 .hero-grid>*{min-width:0}
 .kicker{font-size:.72rem;letter-spacing:.3em;color:var(--muted);margin:0 0 1.6rem}
-.hero h1{font-family:var(--display);font-weight:500;font-size:clamp(2rem,4.4vw,3.5rem);line-height:1.34;letter-spacing:.06em;margin:0 0 1.8rem}
+.hero h1{font-family:var(--display);font-weight:500;font-size:clamp(2rem,4.8vw,3.7rem);line-height:1.34;letter-spacing:.06em;margin:0 0 1.8rem}
 .hero h1 em{font-style:normal;position:relative;white-space:nowrap}
 .hero h1 em svg{position:absolute;left:-2%;bottom:-.14em;width:104%;height:.36em;overflow:visible;z-index:-1}
 .hero p.sub{color:var(--muted);max-width:30em;margin:0 0 2.4rem}
 .cta{display:flex;gap:.8rem;flex-wrap:wrap}
 .hero-photo{margin:0;min-width:0}
-.hero-photo img{display:block;width:100%;height:auto;max-width:100%;aspect-ratio:4/5;object-fit:cover;object-position:64% 50%;animation:rise 1.6s var(--ease) both}
+.hero-photo img{display:block;width:100%;height:auto;max-width:100%;aspect-ratio:21/9;object-fit:cover;object-position:55% 58%;animation:rise 1.6s var(--ease) both}
 .hero-photo figcaption{font-family:var(--display);font-size:.88rem;letter-spacing:.14em;color:var(--muted);margin-top:.9rem;text-align:right}
 @keyframes rise{from{opacity:0;transform:translateY(14px)}}
 @media (prefers-reduced-motion:reduce){.hero-photo img{animation:none}}
@@ -99,7 +105,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .d2{animation-delay:.4s}.d3{animation-delay:1s}
 @keyframes draw{to{stroke-dashoffset:0}}
 @media (prefers-reduced-motion:reduce){.draw{animation:none;stroke-dashoffset:0}}
-@media (max-width:820px){.hero h1{font-size:clamp(1.9rem,8.6vw,3rem)}.hero-grid{grid-template-columns:1fr}.hero-photo{order:-1;margin-inline:calc(-1*max(20px,env(safe-area-inset-left,0px))) calc(-1*max(20px,env(safe-area-inset-right,0px)))}.hero-photo img{aspect-ratio:4/3}.hero-photo figcaption{padding-inline:20px}}
+@media (max-width:820px){.hero h1{font-size:clamp(1.9rem,8.6vw,3rem)}.hero-text{display:block}.hero-text h1{margin-bottom:1.6rem}.hero-grid{grid-template-columns:1fr}.hero-photo{order:-1;margin-inline:calc(-1*max(20px,env(safe-area-inset-left,0px))) calc(-1*max(20px,env(safe-area-inset-right,0px)))}.hero-photo img{aspect-ratio:4/3}.hero-photo figcaption{padding-inline:20px}}
 
 .facts{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:clamp(3rem,7vw,5rem)}
 .facts div{padding:1.3rem 1rem;border-left:1px solid var(--line);min-width:0}
@@ -334,7 +340,7 @@ footer a{text-decoration:none}
 <section class="hero">
   <div class="wrap">
     <div class="hero-grid">
-      <div>
+      <div class="hero-text">
         <p class="kicker">EYEBROW &amp; EYELASH — TENJIN DAIMYO, FUKUOKA</p>
         <h1><span style="white-space:nowrap;margin-left:-.5em">「なんとなく」で</span><br><em>終わらせない。<svg viewBox="0 0 300 30" preserveAspectRatio="none" aria-hidden="true"><path class="draw d3" style="--len:320" d="M4 22 C 80 6, 200 2, 296 14" fill="none" stroke="var(--mist)" stroke-width="6" stroke-linecap="round"/></svg></em></h1>
         <p class="sub">似合う眉が分からない。細くされすぎるのが怖い。まつげが下がって、目元がぼやける。そんな方にこそ来ていただきたいサロンです。最初にあなたと一緒に形を決め、鏡で確かめながら仕上げます。</p>
