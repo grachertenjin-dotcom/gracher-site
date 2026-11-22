@@ -16,6 +16,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#f3f4f4">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" type="image/png" sizes="64x64">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <style>html{-webkit-text-size-adjust:100%}img{max-width:100%}[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -65,7 +66,15 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .hd{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;transition:background .3s,box-shadow .3s}
 .hd.on{background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line)}
 .hd .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:.9rem}
-.wm{font-family:var(--latin);font-size:1.55rem;letter-spacing:.3em;text-decoration:none;line-height:1}
+.wm{display:block;line-height:0;text-decoration:none}
+.wm img{height:clamp(28px,3.2vw,40px);width:auto;max-width:none}
+.on-dark{display:none!important}
+:root[data-theme="dark"] .on-light{display:none!important}:root[data-theme="dark"] .on-dark{display:inline-block!important}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .on-light{display:none!important}:root:not([data-theme="light"]) .on-dark{display:inline-block!important}}
+.foot-mark{display:flex;align-items:center;gap:.9rem}
+.foot-mark img{height:44px;width:auto}
+.closing-mark{display:block;margin:0 auto 1.6rem;line-height:0}
+.closing-mark img{height:72px;width:auto}
 .wm small{display:block;font-family:var(--body);font-size:.6rem;letter-spacing:.24em;color:var(--muted);margin-top:.35rem}
 .nav{display:flex;gap:1.6rem;align-items:center;font-size:.8rem;letter-spacing:.14em}
 .nav a{text-decoration:none;color:var(--muted)}
@@ -340,7 +349,7 @@ footer a{text-decoration:none}
 
 <header class="hd" id="hd">
   <div class="wrap">
-    <a class="wm" href="#top">Gracher<small>グレーシェル</small></a>
+    <a class="wm" href="#top" aria-label="Gracher グレーシェル トップへ"><img class="on-light" src="img/logo-horizontal.svg" alt="GRACHER" width="2111" height="459"><img class="on-dark" src="img/logo-horizontal-white.svg" alt="" width="2111" height="459"></a>
     <nav class="nav" aria-label="ページ内メニュー">
       <a href="#concept">Concept</a><a href="#total">Set</a><a href="#menu">Menu</a><a href="#staff">Staff</a><a href="#faq">Q&amp;A</a><a href="#access">Access</a>
       <a class="btn solid" href="https://beauty.hotpepper.jp/kr/slnH000666628/coupon/" target="_blank" rel="noopener">予約する</a>
@@ -640,6 +649,7 @@ footer a{text-decoration:none}
 
 <section class="closing">
   <div class="wrap">
+    <span class="closing-mark" aria-hidden="true"><img class="on-light" src="img/logo-symbol.svg" alt="" width="821" height="891"><img class="on-dark" src="img/logo-symbol-white.svg" alt="" width="821" height="891"></span>
     <p class="en">Reservation</p>
     <h2>明日の自分が、<br>少し楽しみになる眉とまつげを。</h2>
     <p class="lead">ご予約はホットペッパーから。ご相談だけでも、公式LINEからお気軽にどうぞ。</p>
@@ -653,7 +663,7 @@ footer a{text-decoration:none}
 
 <footer>
   <div class="wrap">
-    <span class="wm" style="font-size:1.2rem">Gracher<small>© Gracher</small></span>
+    <span class="foot-mark"><img class="on-light" src="img/logo-symbol.svg" alt="Gracher" width="821" height="891"><img class="on-dark" src="img/logo-symbol-white.svg" alt="" width="821" height="891"><small>© Gracher</small></span>
     <nav aria-label="外部リンク">
       <a href="https://beauty.hotpepper.jp/kr/slnH000666628/" target="_blank" rel="noopener">ホットペッパービューティー</a>
       <a href="https://lin.ee/sabhCaa" target="_blank" rel="noopener">公式LINE</a>
