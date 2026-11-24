@@ -304,6 +304,11 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .voice .btn.line{color:var(--onDeep);border-color:var(--onDeep)}
 .voice .btn.line:hover{background:var(--onDeep);color:var(--deep)}
 .voice .note{color:var(--onDeep);opacity:.65}
+.rvw{list-style:none;margin:0 calc(-1*var(--gut,16px)) 1rem;padding:0 var(--gut,16px) .8rem;display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;align-items:flex-start;-webkit-overflow-scrolling:touch;text-align:left}
+.rvw li{flex:0 0 min(82%,340px);scroll-snap-align:center;margin:0}
+.rvw img{display:block;width:100%;height:auto;border-radius:4px;background:#fff}
+.rvw small{display:block;font-size:.72rem;opacity:.75;margin-top:.45rem;letter-spacing:.04em}
+.rvw-hint{font-size:.75rem;opacity:.65;margin:0 0 1.8rem}
 .bars{list-style:none;margin:0 auto 2.8rem;padding:0;max-width:520px;display:grid;gap:.9rem;text-align:left}
 .bars li{display:grid;grid-template-columns:7.5em 1fr 2.4em;gap:1rem;align-items:center;font-size:.85rem;letter-spacing:.06em}
 .bars i{display:block;height:3px;background:color-mix(in srgb,var(--onDeep) 18%,transparent);position:relative}
@@ -544,14 +549,23 @@ footer a{text-decoration:none}
   <div class="wrap">
     <p class="en">Reviews</p>
     <h2>お客様の評価</h2>
-    <div class="score"><div><b>4.97</b><span>ホットペッパービューティー（157件）</span></div></div>
+    <div class="score"><div><b>4.97</b><span>ホットペッパービューティー（158件）</span></div></div>
     <ul class="bars" aria-label="ホットペッパーの項目別の評価">
       <li><span>雰囲気</span><i style="--v:100%"></i><b>5.0</b></li>
       <li><span>接客サービス</span><i style="--v:100%"></i><b>5.0</b></li>
       <li><span>技術・仕上がり</span><i style="--v:100%"></i><b>5.0</b></li>
       <li><span>メニュー・料金</span><i style="--v:98%"></i><b>4.9</b></li>
     </ul>
-    <div class="cta" style="justify-content:center"><a class="btn line" href="https://beauty.hotpepper.jp/kr/slnH000666628/review/">口コミを読む</a></div>
+    <ul class="rvw" aria-label="お客様の口コミ">
+      <li><img src="/img/reviews/r1.jpg" alt="ホットペッパービューティーの口コミ（初めての方｜HBL）" width="720" height="725" loading="lazy"><small>初めての方｜HBL</small></li>
+      <li><img src="/img/reviews/r2.jpg" alt="ホットペッパービューティーの口コミ（HBL）" width="720" height="792" loading="lazy"><small>HBL</small></li>
+      <li><img src="/img/reviews/r3.jpg" alt="ホットペッパービューティーの口コミ（はじめてのクーポン｜眉WAX）" width="720" height="869" loading="lazy"><small>はじめてのクーポン｜眉WAX</small></li>
+      <li><img src="/img/reviews/r4.jpg" alt="ホットペッパービューティーの口コミ（HBL）" width="720" height="725" loading="lazy"><small>HBL</small></li>
+      <li><img src="/img/reviews/r5.jpg" alt="ホットペッパービューティーの口コミ（HBL）" width="720" height="615" loading="lazy"><small>HBL</small></li>
+      <li><img src="/img/reviews/r6.jpg" alt="ホットペッパービューティーの口コミ（まつげパーマ）" width="720" height="617" loading="lazy"><small>まつげパーマ</small></li>
+    </ul>
+    <p class="rvw-hint">横にスクロールできます →<br>ホットペッパービューティーの口コミを原文のまま掲載しています</p>
+    <div class="cta" style="justify-content:center"><a class="btn line" href="https://beauty.hotpepper.jp/kr/slnH000666628/review/">すべての口コミを見る（158件）</a></div>
     <p class="note">数値は2026年11月時点のものです。項目別の評価はホットペッパーの直近1年間の集計です。</p>
   </div>
 </section>
