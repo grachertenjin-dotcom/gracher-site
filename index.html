@@ -1,9 +1,29 @@
 <!doctype html>
 <html lang="ja">
 <head>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Gracher（グレーシェル）天神大名店｜福岡・大名の眉毛とまつげのサロン</title>
+<!-- Google アナリティクス -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SCD7SKTTW3"></script>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-SCD7SKTTW3');
+document.addEventListener('click',function(e){
+  var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;
+  var h=a.getAttribute('href')||'',ev=null;
+  if(h.indexOf('beauty.hotpepper.jp')>-1)ev='reserve_click';
+  else if(h.indexOf('lin.ee')>-1||h.indexOf('line.me')>-1)ev='line_click';
+  else if(h.indexOf('tel:')===0)ev='tel_click';
+  else if(h.indexOf('instagram.com')>-1)ev='instagram_click';
+  else if(h.indexOf('google.com/maps')>-1)ev='map_click';
+  if(!ev)return;
+  var sec=a.closest('section[id]')||a.closest('footer,header')||a.closest('[id]');
+  gtag('event',ev,{link_url:h,link_text:(a.textContent||'').trim().slice(0,40),position:sec?(sec.id||sec.tagName.toLowerCase()):'other',transport_type:'beacon'});
+},true);
+</script>
+
 <meta name="description" content="福岡・天神大名の眉毛とまつげのサロン Gracher（グレーシェル）。HBL公認講師が在籍し、カウンセリングで一緒に形を決め、その人に似合う眉とまつげをつくります。赤坂駅徒歩3分・年中無休。">
 <link rel="canonical" href="https://gracher-beauty.jp/">
 <meta property="og:type" content="website">
@@ -668,6 +688,7 @@ footer a{text-decoration:none}
       <a href="https://beauty.hotpepper.jp/kr/slnH000666628/" target="_blank" rel="noopener">ホットペッパービューティー</a>
       <a href="https://lin.ee/sabhCaa" target="_blank" rel="noopener">公式LINE</a>
       <a href="https://www.instagram.com/gracher.tenjin/" target="_blank" rel="noopener">Instagram</a>
+      <a href="privacy.html">プライバシーポリシー</a>
     </nav>
   </div>
 </footer>
