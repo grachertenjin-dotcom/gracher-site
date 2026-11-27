@@ -3,7 +3,7 @@
   ページを「離れる時」ではなく「見ている途中」に記録を送るので、
   インスタの中のブラウザ（×で閉じるとページごと消える）でも届く。
 
-  Googleアナリティクスに送る記録（イベント名）
+  Googleアナリティクスに送る記録（イベント名。/lp/ は頭に lp_、トップページなどは hp_ が付く。例 lp_time_10s）
     time_10s / time_30s / time_60s / time_120s  … 画面に出ていた時間がその秒数に届いた
     scroll_25 / scroll_50 / scroll_75 / scroll_100 … ページをどこまで下に見たか（%）
     view_<区画>   … その区画（例 view_choose＝メニュー欄）が画面に入った
@@ -22,7 +22,7 @@
     var p = params || {};
     p.page_kind = isLP ? 'lp' : 'home';
     p.transport_type = 'beacon';
-    window.gtag('event', name, p);
+    window.gtag('event', (isLP ? 'lp_' : 'hp_') + name, p);
   };
   var fb = function(name){
     if (isLP && typeof window.fbq === 'function') window.fbq('trackCustom', name);
