@@ -14,7 +14,7 @@
   Microsoft Clarity（画面の動きの記録）は CLARITY_ID を入れると動く。
 */
 (function(){
-  var CLARITY_ID = '';
+  var CLARITY_ID = 'zjz67h0y2x';
 
   var isLP = location.pathname.indexOf('/lp') === 0;
   var gt = function(name, params){
